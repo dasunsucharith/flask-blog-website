@@ -55,12 +55,12 @@ def sign_up():
             login_user(new_user, remember=True)
             flash('User created successfully!', category='success')
             
-            return redirect(url_for('views.home'))
+            return redirect(url_for('auth.login'))
         
     return render_template('signup.html')
 
 @auth.route('/logout')
 @login_required
 def logout():
-    login_user()
-    return redirect(url_for('views.home'))
+    logout_user()
+    return redirect(url_for('auth.login'))
