@@ -35,4 +35,4 @@ def create_app():
 def create_database(app):
     if not path.exists("website/" + DB_NAME):
         db.create_all(app=app)
-        print("Databse created.")
+        print("Database created.")
