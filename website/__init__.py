@@ -4,12 +4,12 @@ from os import path
 from flask_login import LoginManager
 
 db = SQLAlchemy()
-DB_NAME = "database.db"
+DB_NAME = "skxdmsjxgwbquz:58d6d0055dda00a6a7c3b61b87994a97a794f145aee572ca0d4ab05bd3b6b579@ec2-3-219-229-143.compute-1.amazonaws.com:5432/d1kehkei3thr9h"
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "slviki.org"
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'postgres://{DB_NAME}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
