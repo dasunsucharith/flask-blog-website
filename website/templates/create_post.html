@@ -5,20 +5,35 @@
 {% endblock %}
 
 {% block content %}
-  <h1 align="center">Make a Post</h1>
-
-  <form method="post">
-    <textarea name="text" id="text" class="form-control"></textarea>
-    <br />
-    <div align="center">
-      <button type="submit" class="btn btn-lg btn-primary">Post</button>
-    </div>
-  </form>
   <br />
-  <div align="center">
-    <a href="/home">
-      <button type="button" class="btn btn-lg btn-secondary">Back</button>
-    </a>
+  <h1 align="center">Make a Post</h1>
+  <br />
+
+  <div class="row">
+    <img src="{{url_for('static',filename = 'images/posts.png')}}" alt="posts" >
   </div>
+
+  <div class="row">
+    <form method="post">
+      <textarea name="text" id="text" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-lg btn-primary">Post</button>
+      </div>
+    </form>
+    <br />
+  </div>
+
+  <br />
+
+  <div class="row">
+    <div align="center">
+      <a href="/home">
+        <button type="button" class="btn btn-lg btn-secondary">Back</button>
+      </a>
+    </div>
+  </div>
+
+  <br /><br /><br /><br />
 
 {% endblock %}
