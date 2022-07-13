@@ -21,9 +21,9 @@
               </span>
 
               {% if user.id in post.likes|map(attribute="author")|list %}
-              <i class="fas fa-thumbs-up" id="like-button-{{post.id}}" onclick="like({{post.id}})"></i>
+                <i class="fas fa-thumbs-up" id="like-button-{{post.id}}" onclick="like({{post.id}})"></i>
               {% else %}
-              <i class="far fa-thumbs-up" id="like-button-{{post.id}}" onclick="like({{post.id}})"></i>
+                <i class="far fa-thumbs-up" id="like-button-{{post.id}}" onclick="like({{post.id}})"></i>
               {% endif %}
 
               {% if user.id == post.author %}
