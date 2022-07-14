@@ -32,8 +32,8 @@ def create_post():
 
     return render_template('create_post.html', user=current_user)
 
-
-
+    
+        
 
 @views.route('/delete-post/<id>')
 @login_required
